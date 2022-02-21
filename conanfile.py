@@ -2,13 +2,13 @@ from conans import ConanFile, CMake
 
 class EBRConan(ConanFile):
     name = "ebr"
-    version = "0.0.0"
+    version = "0.0.1"
     author = "dePaul Miller"
     url = "https://github.com/depaulmillz/ebr"
     settings={"os" : ["Linux"], "compiler" : None, "build_type" : None, "arch": ["x86_64"] }
-    build_requires="gtest/1.10.0"
     generators="cmake"
-    
+    license="MIT"
+
     exports_sources = "CMakeLists.txt", "cmake/*", "include/*", "test/*", "LICENSE"
 
     def _configure_cmake(self):

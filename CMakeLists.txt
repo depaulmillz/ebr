@@ -11,7 +11,6 @@ endif()
 
 include(cmake/config.cmake)
 
-set_consistent_standard(11)
 setup_conan()
 
 enable_testing()

@@ -12,7 +12,7 @@ struct Destructor {
 };
 
 int main() {
-   
+    using namespace ebr;   
     using namespace std::chrono_literals;
 
     EBR<int, Destructor> ebr;

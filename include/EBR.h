@@ -2,13 +2,13 @@
 #include <mutex>
 #include <list>
 #include <atomic>
-#include <variant>
-#define _UNIX03_THREADS
 #include <pthread.h>
 #include <stdexcept>
 #include <thread>
 
-extern "C" struct EBRThreadData {
+namespace ebr {
+
+struct EBRThreadData {
     std::atomic_uint64_t ts;
     std::atomic_bool active;
 
@@ -179,4 +179,4 @@ private:
     ThreadSpecificData<EBRThreadData> key;
 };
 
-
+};
