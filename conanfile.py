@@ -9,7 +9,7 @@ class EBRConan(ConanFile):
     generators="cmake"
     license="MIT"
 
-    exports_sources = "CMakeLists.txt", "cmake/*", "include/*", "test/*", "LICENSE"
+    exports_sources = "CMakeLists.txt", "cmake/*", "include/*", "test/*", "LICENSE", "example/*"
 
     def _configure_cmake(self):
         cmake = CMake(self)
